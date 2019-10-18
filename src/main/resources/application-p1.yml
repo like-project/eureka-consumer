@@ -1,0 +1,13 @@
+server:
+  port: 8580
+
+spring:
+  application:
+    name: cloud-consumer
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@127.0.0.1:8761/eureka/
+  instance:
+    prefer-ip-address: true
