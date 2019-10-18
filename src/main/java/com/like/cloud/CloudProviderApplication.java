@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.openfeign.FeignClient;
 
 /**
  * RibbonClient 自定义Ribbon负载均衡策略
@@ -14,7 +16,8 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 @SpringBootApplication
 //@EnableDiscoveryClient
 @EnableEurekaClient
-@RibbonClient(name = "cloud-client",configuration = MyRibbonRule.class)
+//@RibbonClient(name = "cloud-client",configuration = MyRibbonRule.class)
+@EnableFeignClients
 public class CloudProviderApplication {
 
     public static void main(String[] args) {

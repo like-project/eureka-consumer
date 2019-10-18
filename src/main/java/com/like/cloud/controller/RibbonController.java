@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
  * @Version 1.0
  */
 @RestController
-public class DemoController {
+public class RibbonController {
 
     @Autowired
     private RestTemplate restTemplate;
@@ -25,9 +25,9 @@ public class DemoController {
     @Autowired
     private LoadBalancerClient loadBalancerClient;
 
-    @GetMapping("/demo/get/{id}")
+    @GetMapping("/ribbon/{id}")
     public UserVO demo(@PathVariable int id){
-        return restTemplate.getForObject("http://cloud-client/api/v1/user/"+ id, UserVO.class);
+        return restTemplate.getForObject("http://cloud-client/api/ribbon/"+ id, UserVO.class);
     }
 
     @GetMapping("/log-instance")
