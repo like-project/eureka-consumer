@@ -3,6 +3,7 @@ package com.like.cloud;
 import com.like.rule.MyRibbonRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -18,10 +19,11 @@ import org.springframework.cloud.openfeign.FeignClient;
 @EnableEurekaClient
 //@RibbonClient(name = "cloud-client",configuration = MyRibbonRule.class)
 @EnableFeignClients
-public class CloudProviderApplication {
+@EnableCircuitBreaker
+public class CloudConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CloudProviderApplication.class, args);
+        SpringApplication.run(CloudConsumerApplication.class, args);
     }
 
 }
