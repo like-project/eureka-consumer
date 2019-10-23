@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @ClassName ConfigBean
- * @Description TODO
+ * @Description ribbon负载均衡算法
  * @Author Ke
  * @Date 2019/10/17 16:58
  * @Version 1.0

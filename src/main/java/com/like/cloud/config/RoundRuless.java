@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * @ClassName RoundRule
- * @Description TODO
+ * @Description 自定义ribbon负载均衡算法
  * @Author Ke
  * @Date 2019/10/18 16:15
  * @Version 1.0

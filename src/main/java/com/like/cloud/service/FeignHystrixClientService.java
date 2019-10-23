@@ -1,5 +1,6 @@
 package com.like.cloud.service;
 
+import com.like.cloud.config.ClientFallbackFactory;
 import com.like.cloud.vo.UserVO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

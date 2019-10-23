@@ -1,12 +1,13 @@
-package com.like.cloud.service;
+package com.like.cloud.config;
 
+import com.like.cloud.service.FeignHystrixClientService;
 import com.like.cloud.vo.UserVO;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
 /**
  * @ClassName ClientFallbackFactory
- * @Description TODO
+ * @Description hystrix服务降级
  * @Author Ke
  * @Date 2019/10/21 16:49
  * @Version 1.0
